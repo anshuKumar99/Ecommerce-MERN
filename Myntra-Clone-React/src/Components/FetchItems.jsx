@@ -14,7 +14,7 @@ const FetchItems = () => {
     const controller = new AbortController();
     const signal = controller.signal;
     dispatch(fetchStatusActions.markFetchingStarted());
-    fetch("http://localhost:8080/items", { signal })
+    fetch("https://ecommerce-mern-q1bp.onrender.com/items", { signal })
       .then((response) => response.json())
       .then(({ items }) => {
         dispatch(fetchStatusActions.markFetchDone());
