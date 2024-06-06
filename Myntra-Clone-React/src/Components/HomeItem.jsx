@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../store/bagSlice";
+import { Link } from "react-router-dom";
+import { detailActions } from "../store/detailSlice";
 
 const HomeItem = ({ item }) => {
   const bagItemsId = useSelector((store) => store.bag);
@@ -17,14 +19,20 @@ const HomeItem = ({ item }) => {
     dispatch(bagActions.removeFromBag(item.id));
   };
 
+  const handleShowDetails = () => {
+    dispatch(detailActions.showDetails(item.id));
+  };
+
   return (
     <div className="item-container">
       <img className="item-image" src={item.image} alt="item image" />
       <div className="rating">
         {item.rating.stars} ⭐ | {item.rating.count}
       </div>
-      <div className="company-name">{item.company}</div>
-      <div className="item-name">{item.item_name}</div>
+      <Link to="/details" onClick={handleShowDetails} className="detailLink">
+        <div className="company-name">{item.company}</div>
+        <div className="item-name">{item.item_name}</div>
+      </Link>
       <div className="price">
         <span className="current-price">Rs {item.current_price}</span>
         <span className="original-price">Rs {item.original_price}</span>

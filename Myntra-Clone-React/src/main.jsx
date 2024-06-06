@@ -8,6 +8,7 @@ import Home from "./routes/Home.jsx";
 import Bag from "./routes/Bag.jsx";
 import { Provider } from "react-redux";
 import myntraStore from "./store/index.js";
+import Details from "./routes/Details.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/bag", element: <Bag /> },
+      { path: "/details", element: <Details /> },
     ],
   },
 ]);
