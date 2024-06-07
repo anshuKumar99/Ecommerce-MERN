@@ -41,10 +41,10 @@ const Sort = () => {
     }
   };
   return (
-    <div class="sort_options">
-      <div class="sort_left">Sort by:</div>
+    <div className="sort_options">
+      <div className="sort_left">Sort by:</div>
       <select
-        class="sort_options_select"
+        className="sort_options_select"
         fdprocessedid="oxo1p"
         onChange={handleSortClick}
       >

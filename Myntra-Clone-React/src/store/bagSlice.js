@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const bagSlice = createSlice({
   name: "bag",
-  initialState: [],
+  initialState: localStorage.getItem("bagItems")
+    ? JSON.parse(localStorage.getItem("bagItems"))
+    : [],
   reducers: {
     addToBag: (state, action) => {
       const isAlreadyPresent = state.some(
@@ -11,10 +13,13 @@ const bagSlice = createSlice({
 
       if (!isAlreadyPresent) {
         state.push(action.payload);
+        localStorage.setItem("bagItems", JSON.stringify(state));
       }
     },
     removeFromBag: (state, action) => {
-      return state.filter((itemId) => itemId !== action.payload);
+      state = state.filter((itemId) => itemId !== action.payload);
+      localStorage.setItem("bagItems", JSON.stringify(state));
+      return state;
     },
   },
 });
