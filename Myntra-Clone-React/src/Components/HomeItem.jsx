@@ -1,24 +1,37 @@
+// Importing useSelector and useDispatch from react-redux
 import { useDispatch, useSelector } from "react-redux";
+
+// Importing bagActions and detailActions from store
 import { bagActions } from "../store/bagSlice";
-import { Link } from "react-router-dom";
 import { detailActions } from "../store/detailSlice";
 
+// Importing Link from react-router-dom
+import { Link } from "react-router-dom";
+
+// HomeItem component
 const HomeItem = ({ item }) => {
+  // Using useSelector for getting bagItemsId from redux store
   const bagItemsId = useSelector((store) => store.bag);
+
+  // Using useDispatch for dispatching actions
   const dispatch = useDispatch();
 
+  // check if item is present in bag or not
   const isItemPresent = () => {
     return bagItemsId.some((id) => id === item.id);
   };
 
+  // function to handle Add button for adding item in bag
   const handleAddToBag = () => {
     dispatch(bagActions.addToBag(item.id));
   };
 
+  // function to handle Remove button for removing item from bag
   const handleRemove = () => {
     dispatch(bagActions.removeFromBag(item.id));
   };
 
+  // function to handle show item details
   const handleShowDetails = () => {
     dispatch(detailActions.showDetails(item.id));
   };
@@ -54,4 +67,5 @@ const HomeItem = ({ item }) => {
   );
 };
 
+// exporting HomeItem component
 export default HomeItem;

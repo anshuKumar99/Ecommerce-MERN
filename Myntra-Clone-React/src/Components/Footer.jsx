@@ -1,3 +1,4 @@
+// Footer component
 const Footer = () => {
   return (
     <footer>
@@ -47,4 +48,5 @@ const Footer = () => {
   );
 };
 
+// exporting Footer component
 export default Footer;

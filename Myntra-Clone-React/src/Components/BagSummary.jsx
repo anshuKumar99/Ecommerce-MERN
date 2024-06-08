@@ -1,14 +1,19 @@
+// Importing useSelector from react-redux
 import { useSelector } from "react-redux";
 
+// BagSummary component
 const BagSummary = () => {
+  // Using useSelector for getting bag and items from redux store
   const bag = useSelector((store) => store.bag);
   const items = useSelector((store) => store.items);
 
+  // Getting actual bag items from items and bag array
   const bagItems = items.filter((item) => {
     const isPresent = bag.some((id) => id === item.id);
     return isPresent;
   });
 
+  // Payment details/calculation
   const CONVENIENCE_FEES = 99;
   let totalItem = bag.length;
   let totalMRP = 0;
@@ -52,4 +57,5 @@ const BagSummary = () => {
   );
 };
 
+// exporting BagSummary component
 export default BagSummary;

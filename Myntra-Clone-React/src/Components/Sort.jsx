@@ -1,9 +1,18 @@
+// Importing useSelector and useDispatch from react-redux
 import { useDispatch, useSelector } from "react-redux";
+
+// Importing itemsActions from store
 import { itemsActions } from "../store/itemsSlice";
 
+// Sort component
 const Sort = () => {
+  // Using useDispatch for dispatching actions
   const dispatch = useDispatch();
+
+  // Using useSelector for getting items from redux store
   const items = useSelector((store) => store.items);
+
+  // function to handle sorting of items
   const handleSortClick = (event) => {
     const value = event.target.value;
     if (value === "recommended") {
@@ -61,4 +70,5 @@ const Sort = () => {
   );
 };
 
+// exporting Sort component
 export default Sort;

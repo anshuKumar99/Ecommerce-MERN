@@ -1,3 +1,4 @@
+// LoadingSpinner component
 const LoadingSpinner = () => {
   return (
     <div className="d-flex justify-content-center">
@@ -12,4 +13,5 @@ const LoadingSpinner = () => {
   );
 };
 
+// exporting LoadingSpinner component
 export default LoadingSpinner;

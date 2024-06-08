@@ -1,11 +1,18 @@
+// Importing icons from react-icons
 import { IoPersonOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { IoSearchOutline } from "react-icons/io5";
+
+// Importing Link from react-router-dom
 import { Link } from "react-router-dom";
+
+// Importing useSelector from react-redux
 import { useSelector } from "react-redux";
 
+// Header component
 const Header = () => {
+  // Using useSelector for getting bag from redux store
   const bag = useSelector((store) => store.bag);
   return (
     <header>
@@ -64,4 +71,5 @@ const Header = () => {
   );
 };
 
+// exporting Footer component
 export default Header;

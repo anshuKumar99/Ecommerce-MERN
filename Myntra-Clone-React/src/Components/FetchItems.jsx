@@ -1,5 +1,10 @@
+// Importing useEffect from react
 import { useEffect } from "react";
+
+// Importing useSelector and useDispatch from react-redux
 import { useDispatch, useSelector } from "react-redux";
+
+// Importing fetchStatusActions and itemsActions from store
 import { fetchStatusActions } from "../store/fetchStatusSlice";
 import { itemsActions } from "../store/itemsSlice";
 
@@ -29,4 +34,5 @@ const FetchItems = () => {
   return <></>;
 };
 
+// exporting FetchItems component
 export default FetchItems;

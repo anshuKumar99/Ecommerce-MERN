@@ -1,8 +1,12 @@
+// Importing Elements from Components
 import HomeItem from "../Components/HomeItem";
-import { useSelector } from "react-redux";
 import Sort from "../Components/Sort";
 
+// Importing useSelector from react-redux
+import { useSelector } from "react-redux";
+
 const Home = () => {
+  // Using useSelector for getting items from redux store
   const items = useSelector((store) => store.items);
   return (
     <main>
@@ -15,4 +19,6 @@ const Home = () => {
     </main>
   );
 };
+
+// exporting Home component
 export default Home;

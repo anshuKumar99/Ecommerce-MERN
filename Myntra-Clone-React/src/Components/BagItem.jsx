@@ -1,15 +1,24 @@
+// Importing useDispatch from react-redux
 import { useDispatch } from "react-redux";
+
+// Importing bagActions and detailActions from store
 import { bagActions } from "../store/bagSlice";
-import { Link } from "react-router-dom";
 import { detailActions } from "../store/detailSlice";
 
+// Importing Link from react-router-dom
+import { Link } from "react-router-dom";
+
+// BagItem component
 const BagItem = ({ item }) => {
+  // Using useDispatch for dispatching actions
   const dispatch = useDispatch();
 
+  // function to handle Remove button for removing item from bag
   const handleItemRemove = () => {
     dispatch(bagActions.removeFromBag(item.id));
   };
 
+  // function to handle show item details
   const handleShowItemDetails = () => {
     dispatch(detailActions.showDetails(item.id));
   };
@@ -52,4 +61,5 @@ const BagItem = ({ item }) => {
   );
 };
 
+// exporting BagItem component
 export default BagItem;
