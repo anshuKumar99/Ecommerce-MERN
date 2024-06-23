@@ -2,7 +2,7 @@
 
 ## Description
 
-Myntra is a e-commerce website where you can buy clothes, shoes etc. This project is a clone of Myntra website. This project is built using React, Redux, React-Router, Hooks, NodeJS, ExpressJS, CSS, HTML.
+Myntra is a e-commerce website where you can buy clothes, shoes etc. This project is a clone of Myntra website. This project is built using React, Redux, React-Router, Hooks, NodeJS, ExpressJS, CSS, and HTML.
 
 ## Demo
 ### https://ecommerce-mern-frontend-lake.vercel.app/
