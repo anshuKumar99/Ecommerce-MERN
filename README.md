@@ -1,13 +1,13 @@
 # E-commerce Website (Myntra Clone)
 
-## Description
+# Description
 
 Myntra is a e-commerce website where you can buy clothes, shoes etc. This project is a clone of Myntra website. This project is built using React, Redux, React-Router, Hooks, NodeJS, ExpressJS, CSS, and HTML.
 
-## Demo
+# Demo
 ### https://ecommerce-mern-frontend-lake.vercel.app/
 
-## Tech Stack
+# Tech Stack
 
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
@@ -27,22 +27,22 @@ Myntra is a e-commerce website where you can buy clothes, shoes etc. This projec
 - [x] Footer
 - [x] Responsive 
 
-## Screenshots
+# Screenshots
 
 ![image](https://github.com/anshuKumar99/Ecommerce-MERN/assets/148548385/64f62ce9-4fd9-455e-921e-aff842705531)
 
 
-## Header
+# Header
 
 ![image](https://github.com/anshuKumar99/Ecommerce-MERN/assets/148548385/39e87b50-7f99-4509-b630-ecfabe7cadc2)
 
 
-## Product Card
+# Product Card
 
 ![image](https://github.com/anshuKumar99/Ecommerce-MERN/assets/148548385/a5bd7590-4830-45be-b2d3-ca471c3565fb)
 
 
-## Project Structure
+# Project Structure
 
 ```
 - Backend
@@ -99,31 +99,31 @@ Myntra is a e-commerce website where you can buy clothes, shoes etc. This projec
 
 ```
 
-## Project setup
+# Project setup
 
 ```bash
 npm create vite@latest
 npm install
 ```
 
-## Compiles and hot-reloads for development
+# Compiles and hot-reloads for development
 
 ```
 npm run dev
 ```
 
-## Compiles and minifies for production
+# Compiles and minifies for production
 
 ```
 npm run build
 ```
 
-## Run your server
+# Run your server
 
 ```
 npm start
 ```
 
-## Author
+# Author
 
 [Anshu Kumar](https://github.com/anshuKumar99)
